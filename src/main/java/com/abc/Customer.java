@@ -3,6 +3,9 @@ package com.abc;
 import java.util.List;
 import java.util.ArrayList;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 import static java.lang.Math.abs;
 
 public class Customer {
