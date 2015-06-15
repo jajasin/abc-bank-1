@@ -137,4 +137,15 @@ public class Account implements IAccount {
     public int hashCode() {
         return (int)(31 * accountType + balance + accountNumber);
     }
+    
+    interface IAccount {
+	public double getBalance();    
+	public int getAccountType();
+	public long getAccountNumber();
+	public double interestEarned();
+	public double sumTransactions();
+	public void deposit(final double amount);
+	public void withdraw(final double amount);
+	public void transfer(final Account sourceAccount, final Account targetAccount, final double amount);
+   }
 }
