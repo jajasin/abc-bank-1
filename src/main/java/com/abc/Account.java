@@ -9,7 +9,7 @@ import static java.lang.Math.abs;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Account {
+public class Account implements IAccount{
 	private double balance;	
 	private int accountType;
 	private long accountNumber;
