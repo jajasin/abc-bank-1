@@ -1,7 +1,5 @@
 package com.abc;
 
-import com.util;
-
 import java.util.List;
 import java.util.ArrayList;
 
@@ -11,7 +9,7 @@ import static java.lang.Math.abs;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Account implements IAccount {
+public class Account {
 	private double balance;	
 	private int accountType;
 	private long accountNumber;
@@ -148,16 +146,5 @@ public class Account implements IAccount {
     public int hashCode() {
         return (int)(31 * accountType + balance + accountNumber);
     }
-	
-	interface IAccount {
-		public double getBalance();    
-		public int getAccountType();
-		public long getAccountNumber();
-		public double interestEarned();
-		public double sumTransactions();
-		public void deposit(final double amount);
-		public void withdraw(final double amount);
-		public void transfer(final Account sourceAccount, final Account targetAccount, final double amount);
-	}
 }
 
